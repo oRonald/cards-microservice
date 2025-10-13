@@ -1,4 +1,4 @@
-package br.com.microservices.cards.dto;
+package br.com.microservices.cards.application.dto;
 
 import java.math.BigDecimal;
 
