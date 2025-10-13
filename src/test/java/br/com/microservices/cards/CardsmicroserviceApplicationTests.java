@@ -1,4 +1,4 @@
-package br.com.microservices.cardsmicroservice;
+package br.com.microservices.cards;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
