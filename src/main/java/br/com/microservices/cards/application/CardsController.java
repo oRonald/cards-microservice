@@ -31,13 +31,13 @@ public class CardsController {
         return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
-    @GetMapping(params = "income")
+    @GetMapping(params = "income", path = "/by-income")
     public ResponseEntity<List<Card>> getCardsByIncome(@RequestParam Long income){
         List<Card> cards = service.getCardByIncomeLessOrEqualThan(income);
         return ResponseEntity.ok(cards);
     }
 
-    @GetMapping(params = "cpf")
+    @GetMapping(params = "cpf", path = "by-cpf")
     public ResponseEntity<List<CardsByClientResponse>> cardByClients(@RequestParam String cpf){
         List<ClientCard> clientCards = clientCardService.cardByCpf(cpf);
         return ResponseEntity.ok(CardsByClientResponse.from(clientCards));
