@@ -8,12 +8,14 @@ import br.com.microservices.cards.infrastructure.repository.ClientCardRepository
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.stereotype.Component;
 
 @Component
 @RequiredArgsConstructor
+@Slf4j
 public class CardsPostSubscriber {
 
     private final CardRepository repository;
@@ -33,7 +35,7 @@ public class CardsPostSubscriber {
 
             clientCardRepository.save(clientCard);
         } catch (Exception e){
-            e.printStackTrace();
+            log.error("Error receiving request to card post: {}", e.getMessage());
         }
     }
 
