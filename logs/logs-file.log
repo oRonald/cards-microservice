@@ -632,3 +632,19 @@ java.lang.IllegalArgumentException: No enum constant br.com.microservices.cards.
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
 2025-10-16T16:06:05.187-03:00  INFO 17488 --- [cards] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-10-16T16:11:05.190-03:00  INFO 17488 --- [cards] [AsyncResolver-bootstrap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2025-10-16T16:11:20.765-03:00  INFO 17488 --- [cards] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application CARDS with eureka with status DOWN
+2025-10-16T16:11:20.766-03:00  INFO 17488 --- [cards] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1760641880766, current=DOWN, previous=UP]
+2025-10-16T16:11:20.766-03:00  INFO 17488 --- [cards] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CARDS/cards:6dfc4d865ba1090a611bb44ab1ec3fb1: registering service...
+2025-10-16T16:11:20.772-03:00  INFO 17488 --- [cards] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Waiting for workers to finish.
+2025-10-16T16:11:20.840-03:00  INFO 17488 --- [cards] [DiscoveryClient-InstanceInfoReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CARDS/cards:6dfc4d865ba1090a611bb44ab1ec3fb1 - registration status: 204
+2025-10-16T16:11:21.092-03:00  INFO 17488 --- [cards] [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] o.s.a.r.l.SimpleMessageListenerContainer : Successfully waited for workers to finish.
+2025-10-16T16:11:21.093-03:00  INFO 17488 --- [cards] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-10-16T16:11:21.098-03:00  INFO 17488 --- [cards] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-10-16T16:11:21.108-03:00  INFO 17488 --- [cards] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-10-16T16:11:21.113-03:00  INFO 17488 --- [cards] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-10-16T16:11:21.114-03:00  INFO 17488 --- [cards] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-10-16T16:11:21.115-03:00  INFO 17488 --- [cards] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-10-16T16:11:24.127-03:00  INFO 17488 --- [cards] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2025-10-16T16:11:24.203-03:00  INFO 17488 --- [cards] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CARDS/cards:6dfc4d865ba1090a611bb44ab1ec3fb1 - deregister  status: 200
+2025-10-16T16:11:24.203-03:00  INFO 17488 --- [cards] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
